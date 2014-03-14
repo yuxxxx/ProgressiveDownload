@@ -76,26 +76,6 @@ namespace ProgressiveDownload
             }
         }
 
-        #region Sending変更通知プロパティ
-        private bool _Sending;
-
-        /// <summary>
-        /// リクエストを送信中で、ファイルサイズがわからない状態であるかを表します。
-        /// </summary>
-        public bool Sending
-        {
-            get
-            { return _Sending; }
-            set
-            {
-                if (_Sending == value)
-                    return;
-                _Sending = value;
-                RaisePropertyChanged();
-            }
-        }
-        #endregion
-
         #region Progress変更通知プロパティ
         private long _Progress;
 
